@@ -27,10 +27,10 @@ with app.app_context():
 
 # Load Model & Encoders
 try:
-    model = pickle.load(open("model.pkl", "rb"))
-    brand_encoder = pickle.load(open("brand.pkl", "rb"))
-    fuel_type_encoder = pickle.load(open("fuel_type.pkl", "rb"))
-    transmission_encoder = pickle.load(open("transmission.pkl", "rb"))
+    model = pickle.load(open("Car_Resale/model.pkl", "rb"))
+    brand_encoder = pickle.load(open("Car_Resale/brand.pkl", "rb"))
+    fuel_type_encoder = pickle.load(open("Car_Resale/fuel_type.pkl", "rb"))
+    transmission_encoder = pickle.load(open("Car_Resale/transmission.pkl", "rb"))
 except Exception as e:
     print(f"Error loading model or encoders: {e}")
     model, brand_encoder, fuel_type_encoder, transmission_encoder = None, None, None, None
