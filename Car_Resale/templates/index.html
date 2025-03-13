@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Resale Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚗 Car Resale Price Predictor</h1>
+        <p>Estimate the resale value of your car with AI-powered predictions.</p>
+
+        <div class="card">
+            <h2>Get Started</h2>
+            <p>New here? Sign up to access predictions.</p>
+            <a href="{{ url_for('signup') }}" class="btn">Sign Up</a>
+        </div>
+
+        <div class="card">
+            <h2>Already a User?</h2>
+            <p>Login to predict car prices instantly.</p>
+            <a href="{{ url_for('login') }}" class="btn">Login</a>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,103 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('/static/jesse-collins-lrmo2hlFYE4-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Overlay Effect */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
+    z-index: -1;
+}
+
+/* Signup Container Box */
+.signup-box {
+    background: rgba(255, 255, 255, 0.15); /* Glassmorphic effect */
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    width: 350px;
+}
+
+/* Signup Heading */
+.signup-box h2 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Input Fields */
+.signup-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Input Placeholder */
+.signup-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button */
+.signup-box button {
+    width: 100%;
+    background: #ffbd69;
+    color: #000;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Button Hover Effect */
+.signup-box button:hover {
+    background: #ff5733;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Extra Small Text (e.g., Login Link) */
+.signup-box p {
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Links */
+.signup-box a {
+    color: #ffbd69;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Link Hover */
+.signup-box a:hover {
+    text-decoration: underline;
+}
+

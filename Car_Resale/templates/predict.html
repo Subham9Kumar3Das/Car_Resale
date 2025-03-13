@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Resale Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Car Resale Price Prediction</h1>
+        
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="input-group">
+                <label for="car_age">Car Age (Years):</label>
+                <input type="number" name="car_age" required>
+            </div>
+
+            <div class="input-group">
+                <label for="mileage">Mileage (km):</label>
+                <input type="number" name="mileage" required>
+            </div>
+
+            <div class="input-group">
+                <label for="brand">Brand:</label>
+                <select name="brand">
+                    <option value="Toyota">Toyota</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Ford">Ford</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="fuel_type">Fuel Type:</label>
+                <select name="fuel_type">
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="CNG">CNG</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="transmission">Transmission:</label>
+                <select name="transmission">
+                    <option value="Manual">Manual</option>
+                    <option value="Automatic">Automatic</option>
+                </select>
+            </div>
+
+            <button type="submit">🔮 Predict Price</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result-box">
+                <h2>Estimated Price:</h2>
+                <h3 class="result">₹ {{ prediction }}</h3>
+            </div>
+        {% endif %}
+
+        <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    </div>
+</body>
+</html>
+
+
+
