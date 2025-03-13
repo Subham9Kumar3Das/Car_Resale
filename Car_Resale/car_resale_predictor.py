@@ -115,7 +115,7 @@ def predict():
             # Predict price
             predicted_price = model.predict(input_features)[0]
 
-            return render_template('predict.html', prediction=f"Estimated price: ₹{predicted_price:.2f}")
+            return render_template('predict.html', prediction=f"Estimated price: ${predicted_price:.2f}")
         except Exception as e:
             flash(f"Error: {str(e)}", "danger")
 
